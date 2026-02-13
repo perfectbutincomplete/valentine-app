@@ -14,10 +14,10 @@ const config = {
       strict: true
     }),
     
-    // УБЕРИ paths.base - ты деплоишь в КОРЕНЬ!
-    // paths: {
-    //   base: '/valentine-app'  ← УДАЛИ ЭТО!
-    // },
+    // Для деплоя в GitHub Pages под путём /valentine-app
+    paths: {
+      base: '/valentine-app'
+    },
     
     appDir: 'app'
   }
