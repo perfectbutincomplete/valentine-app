@@ -9,17 +9,17 @@ const config = {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: undefined,
+      fallback: '404.html',  // ← ВАЖНО для SPA роутинга
       precompress: false,
       strict: true
     }),
     
-    paths: {
-      base: process.env.NODE_ENV === 'production' ? '/valentine-app' : ''
-    },
+    // УБЕРИ paths.base - ты деплоишь в КОРЕНЬ!
+    // paths: {
+    //   base: '/valentine-app'  ← УДАЛИ ЭТО!
+    // },
     
-    // ВАЖНО: Настройки для GitHub Pages
-    appDir: 'app',  // Изменено с '_app' на 'app' (без подчеркивания)
+    appDir: 'app'
   }
 };
 

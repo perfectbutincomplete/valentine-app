@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // SPA redirect hack для GitHub Pages
+    // Перенаправляет /page на /?/page для работы SvelteKit роутинга
+    const path = window.location.pathname;
+    if (path && path !== '/') {
+      const redirect = '/?/' + path.slice(1);
+      window.location.replace(redirect);
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
