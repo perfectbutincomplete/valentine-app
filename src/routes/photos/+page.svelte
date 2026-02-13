@@ -3,6 +3,7 @@
   import { fade } from 'svelte/transition';
   import PhotoCard from '$lib/components/PhotoCard.svelte';
   import ImageModal from '$lib/components/ImageModal.svelte';
+  import { base } from '$app/paths';
   
   // КОЛЛЕКЦИЯ ФОТОГРАФИЙ
   // Фото хранятся в /static/photos/
@@ -10,32 +11,32 @@
     {
       id: 1,
       // Локальные файлы из /static/photos/
-      url: "/photos/photo-1.jpg",
-      thumbnail: "/photos/photo-1.jpg",
+      url: `${base}/photos/photo-1.jpg`,
+      thumbnail: `${base}/photos/photo-1.jpg`,
       location: "Бишкек",
       caption: "Ночная прогулка",
       likes: 67
     },
     {
       id: 2,
-      url: "/photos/photo-2.jpg",
-      thumbnail: "/photos/photo-2.jpg",
+      url: `${base}/photos/photo-2.jpg`,
+      thumbnail: `${base}/photos/photo-2.jpg`,
       location: "Бишкек",
       caption: "Кинотеатр",
       likes: 67
     },
     {
       id: 3,
-      url: "/photos/photo-3.jpg",
-      thumbnail: "/photos/photo-3.jpg",
+      url: `${base}/photos/photo-3.jpg`,
+      thumbnail: `${base}/photos/photo-3.jpg`,
       location: "Бишкек",
       caption: "Зимняя прогулка",
       likes: 67
     },
     {
       id: 4,
-      url: "/photos/photo-4.jpg",
-      thumbnail: "/photos/photo-4.jpg",
+      url: `${base}/photos/photo-4.jpg`,
+      thumbnail: `${base}/photos/photo-4.jpg`,
       location: "Бишкек",
       caption: "Двойное свидание",
       likes: 67
@@ -44,7 +45,7 @@
   
   // Главное фото
   const featurePhoto = {
-    url: "/photos/feature.jpg",
+    url: `${base}/photos/feature.jpg`,
     caption: "Галерея ❤️",
     date: "21 ноября 2024"
   };
