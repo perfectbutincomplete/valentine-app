@@ -4,6 +4,8 @@
   import VinylPlayer from '$lib/components/VinylPlayer.svelte';
   import TrackInfo from '$lib/components/TrackInfo.svelte';
   import Playlist from '$lib/components/Playlist.svelte';
+  import { base } from '$app/paths';
+
   
   // ПЛЕЙЛИСТ
   // Музыка будет загружаться из /static/music/
@@ -13,28 +15,28 @@
       artist: "The Chainsmokers ft. Halsey",
       duration: "4:05",
       icon: "music",
-      audioUrl: "/music/closer.mp3"
+      audioUrl: `${base}/music/closer.mp3`
     },
     {
       title: "BIRAQ!",
       artist: "Dosekesh",
       duration: "2:54",
       icon: "heart",
-      audioUrl: "/music/uzbek.mp3"
+      audioUrl: `${base}/music/uzbek.mp3`
     },
     {
       title: "Nobody's businness",
       artist: "Rihanna ft. Chris Brown",
       duration: "3:16",
       icon: "book",
-      audioUrl: "/music/nobody.mp3"
+      audioUrl: `${base}/music/nobody.mp3`
     },
     {
       title: "нужна ",
       artist: "M’Dee",
       duration: "4:20",
       icon: "moon",
-      audioUrl: "/music/needy.mp3"
+      audioUrl: `${base}/music/needy.mp3`
     }
   ];
   
