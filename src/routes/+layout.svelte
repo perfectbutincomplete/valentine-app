@@ -4,6 +4,7 @@
   import BottomNav from '$lib/components/BottomNav.svelte';
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
 
   let sections = [
     { id: 'love', icon: 'heart', label: 'Любовь', path: '/' },
@@ -14,15 +15,17 @@
 
   // ✅ БЕЗ ФУНКЦИИ! Просто derived значение
   let activeSection = $derived.by(() => {
-    const path = $page.url.pathname;
+    const fullPath = $page.url.pathname;
+    // remove base prefix when present so comparisons work with routes like '/music'
+    const path = fullPath.startsWith(base) ? fullPath.slice(base.length) || '/' : fullPath;
     if (path === '/') return 'love';
-    
+
     const section = sections.find(s => s.path !== '/' && path.startsWith(s.path));
     return section ? section.id : 'love';
   });
 
   function handleNavClick(section) {
-    goto(section.path);
+    goto(base + section.path);
   }
 </script>
 
