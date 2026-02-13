@@ -1,0 +1,1 @@
+import{a,f as s}from"./xb9eWh_e.js";import"./DCwrimb1.js";var t=s('<div class="decorative-hearts svelte-1vfcpqd"><div class="heart svelte-1vfcpqd">❤️</div> <div class="heart svelte-1vfcpqd">💕</div> <div class="heart svelte-1vfcpqd">💖</div> <div class="heart svelte-1vfcpqd">💝</div></div>');function r(v){var e=t();a(v,e)}export{r as D};
