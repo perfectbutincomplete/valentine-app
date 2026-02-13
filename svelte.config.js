@@ -9,15 +9,17 @@ const config = {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: '404.html',
+      fallback: undefined,
       precompress: false,
       strict: true
     }),
     
-    // ВАЖНО: Если деплоишь в поддиректорию (username.github.io/repo-name)
     paths: {
       base: process.env.NODE_ENV === 'production' ? '/valentine-app' : ''
-    }
+    },
+    
+    // ВАЖНО: Настройки для GitHub Pages
+    appDir: 'app',  // Изменено с '_app' на 'app' (без подчеркивания)
   }
 };
 
